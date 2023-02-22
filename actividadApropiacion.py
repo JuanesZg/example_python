@@ -46,3 +46,29 @@ ModeloTelefono = "Motorola E20"
 ValorRecarga = 3000
 print("\n",EstadoAmigo,"\n", NumeroAmigo,"\n", SaldoTelefonico,"\n", Dinero,"\n", CostoMinutero,"\n", ModeloTelefono,"\n", ValorRecarga)
 '''
+
+#Caso 1. El almacén WC distribuye los siguientes artículos
+Articulos = {
+    "Articulo1":"Zapatos", "Precio1":350000, 
+    "Articulo2":"Tenis", "Precio2":280000, 
+    "Articulo3":"Camisetas", "Precio3":175000,
+    "Articulo4":"Jeans", "Precio4":200000
+    }
+
+#Muestra en la consola los artículos y precios actuales
+print(Articulos)
+
+#También mostrar el costo total de los cuatro artículos
+print("El precio total es $",Articulos["Precio1"]+Articulos["Precio2"]+Articulos["Precio3"]+Articulos["Precio4"])
+
+#Además, el promedio de venta(precios)
+print("El promedio de los precios es $",int((Articulos["Precio1"]+Articulos["Precio2"]+Articulos["Precio3"]+Articulos["Precio4"]) / 4))
+
+#Subir el precio de los Jeans en un 6.2%
+Articulos["NuevoPrecio4"] = int(Articulos["Precio4"]+(Articulos["Precio4"]*0.062))
+
+#Disminuir el precio de los Zapatos en un 0.8%
+Articulos["NuevoPrecio1"] = int(Articulos["Precio1"]-(Articulos["Precio1"]*0.008))
+
+#Por último, mostrar el nuevo valor de los Zapatos y de los Jeans
+print("El nuevo precio de los Jeans es", Articulos["NuevoPrecio4"], "y el nuevo precio de los Zapatos es", Articulos["NuevoPrecio1"])
